@@ -1,16 +1,10 @@
-const initialState = {
 
-}
+import { combineReducers } from "redux";
 
-const rootReducer = (state = initialState, action) => {
-  let newState = {...state};
+import gameReducer from "./gameReducer";
 
-  switch(action.type){
-    default:
-      ;
-  }
-
-  return newState;
-}
+const rootReducer = combineReducers({
+  gameReducer
+});
 
 export default rootReducer;

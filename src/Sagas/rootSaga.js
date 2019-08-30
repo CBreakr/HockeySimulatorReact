@@ -1,8 +1,16 @@
 
-import { takeEvery, takeLatest, fork } from "redux-saga";
+import { spawnAllRestartingSagas } from "./SpawnAllUtil";
 
-function* rootSaga() {
-  yield "empty root";
+import gameSimSaga from "./gameSimSaga";
+
+function* rootSaga () {
+  console.log("root saga");
+
+  const sagas = [
+    gameSimSaga
+  ];
+
+  yield spawnAllRestartingSagas(sagas);
 }
 
 export default rootSaga;
