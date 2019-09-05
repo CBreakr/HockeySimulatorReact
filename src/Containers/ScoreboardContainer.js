@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 
 import Scoreboard from "../Components/GameSim/Scoreboard";
 
-import { DispatchAction } from "../Reducers/gameAction";
+import { DispatchAction } from "../Reducers/gameActions";
 
 const mapStateToProps = (state, props) => {
   return {
-    ...state
+    ...state.gameReducer
   };
 }
 

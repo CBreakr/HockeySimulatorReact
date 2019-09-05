@@ -1,13 +1,13 @@
 
 import { connect } from "react-redux";
 
-import GameOptions from "../Components/GameSim/GameOptions";
+import GameOptions from "../Components/GameSim/GameOptionsBar";
 
 import { DispatchActions } from "../Reducers/gameActions";
 
 const mapStateToProps = (state, props) => {
   return {
-    ...state
+    ...state.gameReducer
   };
 }
 

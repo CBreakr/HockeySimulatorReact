@@ -6,7 +6,7 @@ import GameDisplay from "../Components/GameSim/GameDisplay";
 import { DispatchActions } from "../Reducers/gameActions";
 
 const mapStateToProps = (state, props) => {
-  return {...state};
+  return {...state.gameReducer};
 }
 
 const mapDispatchToProps = dispatch => {

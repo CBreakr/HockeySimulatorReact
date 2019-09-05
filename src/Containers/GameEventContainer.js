@@ -1,13 +1,13 @@
 
 import { connect } from "react-redux";
 
-import GameEvent frrom "../Components/GameSim/GameEvent";
+import GameEvent from "../Components/GameSim/GameEvent";
 
 import { DispatchActions } from "../Reducers/gameActions";
 
 const mapStateToProps = (state, props) => {
   return {
-    ...state
+    ...state.gameReducer
   };
 }
 

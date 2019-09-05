@@ -7,7 +7,7 @@ import { DispatchActions } from "../Reducers/gameActions";
 
 const mapStateToProps = (state, props) => {
   return {
-    ...state
+    ...state.gameReducer
   };
 }
 
