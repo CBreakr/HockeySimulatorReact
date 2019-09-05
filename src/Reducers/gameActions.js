@@ -4,7 +4,5 @@ export const reducerActionTypes = {
 };
 
 export const dispatchActions = {
-  testAction: (dispatch) => {
-    dispatch({type: reducerActionTypes.TEST_TYPE});
-  } 
+
 };
