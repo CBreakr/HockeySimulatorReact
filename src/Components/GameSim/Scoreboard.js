@@ -2,12 +2,16 @@ import React from "react";
 
 class Scoreboard extends React.Component {
   render() {
+    console.log("scoreborard props", this.props);
     return (
       <div>
-        <div style={{display:"flex", justifyContent:"space-around"}}>
-          <TeamScoreDisplay team={{name:"AAA", goals:2, shots: 12}} />
-          <TeamScoreDisplay team={{name:"BBB", goals:1, shots:14}} />
-        </div>
+        {this.props.game
+          ? <div style={{display:"flex", justifyContent:"space-around"}}>
+            <TeamScoreDisplay team={this.props.game.home_team} />
+            <TeamScoreDisplay team={this.props.game.away_team} />
+          </div>
+          :<></>
+        }
       </div>
     )
   }
@@ -16,7 +20,7 @@ class Scoreboard extends React.Component {
 const TeamScoreDisplay = (props) => {
   return (
     <div style={{display:"flex", flexDirection:"column"}}>
-      <h3>{props.team.name}</h3>
+      <h3>{props.team.team_name}</h3>
       <span>
         <h4>Goals: {props.team.goals}</h4>
       </span>

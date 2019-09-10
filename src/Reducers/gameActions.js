@@ -46,6 +46,7 @@ export const dispatchActions = {
   },
   addEvent: (dispatch, event) => {
     console.log("actions: add event");
+    // hmm... I hate that I have to do this...
     setTimeout(() => {
       dispatch({
         type:sagaActionTypes.ADD_EVENT_SAGA,

@@ -5,7 +5,6 @@ import MockGame from "../GameProcessing/MockGame";
 
 const initialState = {
   game:null,
-  testValue:10,
   eventLog:[]
 }
 
