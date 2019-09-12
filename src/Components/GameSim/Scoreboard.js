@@ -20,7 +20,11 @@ class Scoreboard extends React.Component {
 const TeamScoreDisplay = (props) => {
   return (
     <div style={{display:"flex", flexDirection:"column"}}>
-      <h3>{props.team.team_name}</h3>
+      <h3 style={
+        props.team.won
+        ? {backgroundColor:"#33DD55"}
+        : null
+      }>{props.team.team_name}: {props.team.wins}</h3>
       <span>
         <h4>Goals: {props.team.goals}</h4>
       </span>
