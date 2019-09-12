@@ -8,11 +8,6 @@ class GameDisplay extends React.Component {
     return (
       <>
       <hr />
-      <span>
-        TEST
-        {this.props.testValue}
-        TEST
-      </span>
       <div style={{display:"flex", flexDirection:"column"}}>
         {
           this.props.eventLog
